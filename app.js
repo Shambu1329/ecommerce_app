@@ -33,5 +33,10 @@ app.post("/update",async(req,res)=>{
     res.send(data)
 })
 
+app.post("/delete",async(req,res)=>{
+    let data=await eModel.find(req.body)
+    res.send(data)
+})
+
 app.listen(3000)
 
